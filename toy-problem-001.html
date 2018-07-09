@@ -1,0 +1,23 @@
+<!-- 
+ CentOS 7 has this bug that after an uptime of around 50 days 
+ the user interface freezes and is not usable anymore i.e. if the
+ miiliseconds reaches to 2^32.
+ Check the bug in detail on:
+ https://bugs.centos.org/view.php?id=12808
+  -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Toy Problem 001</title>
+</head>
+<body>
+	<p>How many days is 2^32 milliseconds?</p>
+	<button onclick="myFunction()">Calculate</button>
+	<p id="demo"></p>
+</body>
+<script type="text/javascript">
+	function myFunction(){
+		document.getElementById("demo").innerHTML = Math.round(Math.pow(2,32)/1000/60/60/24);
+	}
+</script>
+</html>
