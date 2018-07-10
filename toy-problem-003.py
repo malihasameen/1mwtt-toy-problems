@@ -43,3 +43,8 @@ print("Solution with Built-in Function")
 table = str.maketrans("abcdefghijklmnopqrstuvwxyz","cdefghijklmnopqrstuvwxyzab")
 print(raw.translate(table))
 
+# solution using dict and zip
+inputtable = "abcdefghijklmnopqrstuvwxyz,. '()"
+outputtable = "cdefghijklmnopqrstuvwxyzab,. '()"
+result = "".join(dict(zip(inputtable,outputtable))[c] for c in raw)
+print(result)
